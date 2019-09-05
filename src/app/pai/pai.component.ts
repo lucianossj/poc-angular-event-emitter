@@ -7,11 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaiComponent implements OnInit {
 
-  mensagemParaEnviar: string = 'Mensagem enviada do component pai para filho através do Input';
+  mensagemParaEnviar: string = 'Filho?';
+  mensagemRecebida: string = 'Pai?';
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  enviarParaFilho(mensagem: string) {
+    this.mensagemParaEnviar = mensagem;
+  }
+
+  getMensagem(mensagem: string) {
+    this.mensagemRecebida = mensagem;
   }
 
 }
