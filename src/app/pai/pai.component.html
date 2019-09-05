@@ -1,2 +1,9 @@
 
-<app-filho [mensagemRecebida]="mensagemParaEnviar"></app-filho>
+<button (click)="enviarParaFilho('Olá filho!')"> Enviar para filho </button>
+
+<app-filho [mensagemRecebida]="mensagemParaEnviar" (mensagemParaEmitir)="getMensagem($event)"></app-filho>
+
+<p>
+  {{ mensagemRecebida }}
+</p>
+
